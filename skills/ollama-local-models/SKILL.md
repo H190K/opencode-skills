@@ -32,5 +32,15 @@ Or run the script directly:
 ## Notes
 
 - The script uses `jq` to safely manipulate JSON. Install it with `brew install jq` if missing.
-- A backup of the original config is created at `opencode.jsonc.bak` before each run.
+- A single persistent backup is kept at `opencode.jsonc.bak` — old backups are removed before creating a new one.
 - If you want different reasoning efforts per model, edit `opencode.jsonc` after running the sync.
+
+## Restoring from Backup
+
+If the sync breaks your config, restore the backup:
+
+```bash
+cp ~/.config/opencode/opencode.jsonc.bak ~/.config/opencode/opencode.jsonc
+```
+
+This overwrites the current config with the pre-sync version. The backup is always the config from *before* the last sync run.

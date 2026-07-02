@@ -14,6 +14,7 @@ if ! command -v ollama &>/dev/null; then
   exit 1
 fi
 
+[ -f "$BACKUP_FILE" ] && rm "$BACKUP_FILE"
 cp "$CONFIG_FILE" "$BACKUP_FILE"
 echo "Backup saved to $BACKUP_FILE"
 
