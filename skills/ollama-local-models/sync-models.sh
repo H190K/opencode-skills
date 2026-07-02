@@ -44,7 +44,7 @@ echo "$MODEL_NAMES"
 
 jq --arg models "$MODEL_NAMES" '
   .provider["ollama-local"].models = (
-    [$models | split("\n")[] | select(length > 0)] | map({(.): {name: ., options: {reasoningEffort: "high"}}}) | add
+    [$models | split("\n")[] | select(length > 0)] | map({(.): {name: ., attachment: true, modalities: {input: ["text", "image"], output: ["text"]}, options: {reasoningEffort: "high"}}}) | add
   )
 ' "$CONFIG_FILE" > "$CONFIG_FILE.tmp" && mv "$CONFIG_FILE.tmp" "$CONFIG_FILE"
 

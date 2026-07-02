@@ -26,8 +26,9 @@ Or run the script directly:
 1. Runs `ollama list` to get all currently downloaded models.
 2. Reads the existing `opencode.jsonc` configuration.
 3. Rebuilds the `models` block under `ollama-local` provider with every downloaded model.
-4. Sets `reasoningEffort` to `"high"` for every model (the highest available).
-5. Writes the updated config back, preserving all other settings (MCP servers, other providers, etc.).
+ 4. Enables vision/image support (`attachment: true`, `modalities: { input: ["text", "image"], output: ["text"] }`).
+ 5. Sets `reasoningEffort` to `"high"` for every model (the highest available).
+ 6. Writes the updated config back, preserving all other settings (MCP servers, other providers, etc.).
 
 ## Notes
 

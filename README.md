@@ -37,7 +37,7 @@ Reusable skill modules for OpenCode:
 - `frontend-design` - UI design & polish
 - `seo-optimizer` - Search optimization
 - `api-integration-specialist` - Third-party API integrations
-- ...and more
+- `ollama-local-models` - Auto-sync Ollama models into opencode config with vision support
 
 ## Usage
 
