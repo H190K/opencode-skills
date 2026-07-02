@@ -7,7 +7,7 @@ A collection of custom agents and skills for [OpenCode](https://opencode.ai/) - 
 ```
 opencode-skills/
 ├── agents/     # 129 OpenCode agent configurations
-└── skills/     # 11 OpenCode skills
+└── skills/     # 12 OpenCode skills
 ```
 
 ## Agents
@@ -38,6 +38,7 @@ Reusable skill modules for OpenCode:
 - `seo-optimizer` - Search optimization
 - `api-integration-specialist` - Third-party API integrations
 - `ollama-local-models` - Auto-sync Ollama models into opencode config with vision support
+- `playwright-cleanup` - Remove Playwright cache, browser binaries, screenshots, and temp data
 
 ## Usage
 
